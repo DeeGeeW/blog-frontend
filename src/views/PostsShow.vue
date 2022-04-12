@@ -35,11 +35,4 @@ export default {
 };
 </script>
 
-<style>
-body {
-  background-color: aqua;
-}
-h1 {
-  color: gold;
-}
-</style>
+<style></style>
