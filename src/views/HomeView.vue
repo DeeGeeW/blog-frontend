@@ -5,8 +5,6 @@ export default {
       message: "Home Page!",
     };
   },
-  created: function () {},
-  methods: {},
 };
 </script>
 
