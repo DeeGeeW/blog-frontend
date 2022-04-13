@@ -41,6 +41,7 @@ export default {
         Body:
         <input type="text" v-model="newPost.body" />
       </p>
+      <small>Body Count: {{ newPost?.body?.length }}</small>
       <p>
         Image:
         <input type="text" v-model="newPost.image" />

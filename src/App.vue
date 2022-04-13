@@ -1,5 +1,5 @@
 <template>
-  <nav>
+  <!-- <nav>
     <router-link to="/">Home</router-link>
     |
     <router-link to="/signup">Signup</router-link>
@@ -11,7 +11,7 @@
     <router-link to="/posts">Posts</router-link>
     |
     <router-link to="/posts/new">New Post</router-link>
-  </nav>
+  </nav> -->
   <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <div class="container-fluid">
       <a class="navbar-brand" href="#">BLOGr</a>
@@ -29,13 +29,22 @@
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <li class="nav-item">
-            <router-link to="/">Home</router-link>
+            <a class="nav-link active" aria-current="page" href="/">Home</a>
           </li>
-          |
+          <li v-if="!isLoggedIn" key="" class="nav-item"></li>
+          <a class="nav-link active" aria-current="page" href="/signup">Signup</a>
+          <li v-if="!isLoggedIn" class="nav-item"></li>
+          <a class="nav-link active" aria-current="page" href="/login">Login</a>
+          <li v-if="isLoggedIn" class="nav-item">
+            <a class="nav-link active" aria-current="page" href="/logout">Logout</a>
+          </li>
           <li class="nav-item">
-            <router-link to="/signup">Signup</router-link>
+            <a class="nav-link active" aria-current="page" href="/posts">Posts</a>
           </li>
-          <li class="nav-item dropdown">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="/posts/new">New Posts</a>
+          </li>
+          <!-- <li class="nav-item dropdown">
             <a
               class="nav-link dropdown-toggle"
               href="#"
@@ -52,20 +61,35 @@
               <li><hr class="dropdown-divider" /></li>
               <li><a class="dropdown-item" href="#">Something else here</a></li>
             </ul>
-          </li>
+          </li> -->
           <li class="nav-item">
-            <a class="nav-link disabled">Disabled</a>
+            <!-- <a class="nav-link disabled">Disabled</a> -->
           </li>
         </ul>
-        <form class="d-flex">
+        <!-- <form class="d-flex">
           <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
           <button class="btn btn-outline-success" type="submit">Search</button>
-        </form>
+        </form> -->
       </div>
     </div>
   </nav>
   <router-view />
 </template>
+
+<script>
+export default {
+  data: function () {
+    return {
+      isLoggedIn: false,
+    };
+  },
+  watch: {
+    $route: function () {
+      this.isLoggedIn = !!localStorage.jwt;
+    },
+  },
+};
+</script>
 
 <style>
 body {
