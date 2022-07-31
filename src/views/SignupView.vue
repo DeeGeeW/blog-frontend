@@ -26,7 +26,7 @@ export default {
 
 <template>
   <div class="signup">
-    <form v-on:submit.prevent="submit()">
+    <form v-on:submit.prevent="createUser()">
       <h1>Signup</h1>
       <ul>
         <li v-for="error in errors" v-bind:key="error">{{ error }}</li>
@@ -51,3 +51,12 @@ export default {
     </form>
   </div>
 </template>
+
+<style>
+.signup label {
+  color: blanchedalmond;
+}
+.signup h1 {
+  color: yellow;
+}
+</style>

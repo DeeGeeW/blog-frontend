@@ -27,7 +27,7 @@ export default {
 </script>
 
 <template>
-  <div class="home">
+  <div class="new-post">
     <h1>New Post</h1>
     <form v-on:submit.prevent="createPost()">
       <ul>
@@ -51,4 +51,11 @@ export default {
   </div>
 </template>
 
-<style></style>
+<style>
+.new-post p {
+  color: blanchedalmond;
+}
+.new-post h1 {
+  color: yellow;
+}
+</style>

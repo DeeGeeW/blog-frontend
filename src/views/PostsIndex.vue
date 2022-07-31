@@ -59,5 +59,6 @@ img {
 }
 .card {
   margin: 20px;
+  background-color: rosybrown;
 }
 </style>
