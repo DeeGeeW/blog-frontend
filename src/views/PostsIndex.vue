@@ -58,6 +58,6 @@ img {
   /* margin: 10px; */
 }
 .card {
-  margin: 10px;
+  margin: 20px;
 }
 </style>
