@@ -49,9 +49,15 @@ export default {
 .selected .card-body {
   color: orangered;
   background-color: aqua;
+  margin: 10px;
+  /* padding: 5px; */
 }
 img {
   height: 250px;
   object-fit: cover;
+  /* margin: 10px; */
+}
+.card {
+  margin: 10px;
 }
 </style>
