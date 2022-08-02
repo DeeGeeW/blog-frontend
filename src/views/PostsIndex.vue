@@ -45,7 +45,7 @@ export default {
   </div>
 </template>
 
-<style>
+<style scoped>
 .selected .card-body {
   color: orangered;
   background-color: aqua;

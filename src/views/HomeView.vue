@@ -15,7 +15,7 @@ export default {
 </template>
 
 <style>
-.home h1 {
+h1 {
   color: yellow;
 }
 </style>

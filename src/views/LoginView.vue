@@ -47,3 +47,9 @@ export default {
     </form>
   </div>
 </template>
+
+<style>
+label {
+  color: aquamarine;
+}
+</style>
