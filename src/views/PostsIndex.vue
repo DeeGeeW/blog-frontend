@@ -61,4 +61,7 @@ img {
   margin: 20px;
   background-color: rosybrown;
 }
+short {
+  color: orange;
+}
 </style>

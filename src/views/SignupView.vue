@@ -34,6 +34,7 @@ export default {
       <div>
         <label>Name:</label>
         <input type="text" v-model="newUserParams.name" />
+        <small v-if="newUserParams.name">{{ 20 - newUserParams.name.length }} characters remaining</small>
       </div>
       <div>
         <label>Email:</label>
@@ -58,5 +59,8 @@ export default {
 }
 .signup h1 {
   color: yellow;
+}
+small {
+  color: orange;
 }
 </style>
